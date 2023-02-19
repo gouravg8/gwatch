@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, final-scale=1.0">
+    <title>My watch Store</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="py-6 md:py-12 border-b-2 border-gray-400">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
+                Goni watch Store
+            </h1>
+        </header>
+        <section class="py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="md:order-2">
+                    <img src="https://via.placeholder.com/500x500" id="mainWatchImage" alt="watch"
+                        class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:order-1">
+                    <h2 class="text-3xl font-extrabold text-gray-800 leading-tight">
+                        The Best watch
+                    </h2>
+                    <p class="text-xl text-gray-600 my-4">
+                        Experience luxury with The Best watch - a timeless piece crafted with precision, quality
+                        materials, and impeccable design.
+                    </p>
+                    <a href="#" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="py-12">
+            <h2 class="text-3xl font-extrabold text-gray-800 leading-tight text-center mb-12">
+                Featured Products
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 container" id="container">
+                <div class="bg-white rounded-lg shadow-lg">
+                    <!-- <img src="https://via.placeholder.com/300x300" alt="Product" class="w-full rounded-t-lg"> -->
+                    <img src="https://api.unsplash.com/search/photos" alt="Product" id="watchImage1"
+                        class="w-full rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800">
+                            Casio G-Shock Rangeman
+                        </h3>
+                        <p class="text-sm text-gray-600 my-2">
+                            Rugged, solar-powered watch with triple sensors, shock-resistant case, and water resistance
+                            up to 200m.
+                        </p>
+                        <p class="text-lg font-bold text-gray-800 mb-2">
+                            $250.00
+                        </p>
+                        <a href="#" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/300x300" alt="Product" id="watchImage2"
+                        class="w-full rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800">
+                            Timex Ironman Classic 30
+                        </h3>
+                        <p class="text-sm text-gray-600 my-2">
+                            Affordable, durable sports watch with 30-lap memory, stopwatch, countdown timer, and Indiglo
+                            backlight.
+                        </p>
+                        <p class="text-lg font-bold text-gray-800 mb-2">
+                            $40.00
+                        </p>
+                        <a href="#" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/300x300" alt="Product" id="watchImage3"
+                        class="w-full rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800">
+                            Fossil Grant Sport Chronograph
+                        </h3>
+                        <p class="text-sm text-gray-600 my-2">
+                            Classic, stylish watch with a black dial, three subdials, date window, and black leather
+                            strap.
+                            <p class="text-lg font-bold text-gray-800 mb-2">
+                                $115.00
+                            </p>
+                            <a href="#" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900">
+                                Buy Now
+                            </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/300x300" alt="Product" id="watchImage4"
+                        class="w-full rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800">
+                            Suunto Traverse Alpha
+                        </h3>
+                        <p class="text-sm text-gray-600 my-2">
+                            High-performance outdoor watch with GPS, GLONASS, Bluetooth, moon phase calendar, and
+                            durable composite case.
+                        </p>
+                        <p class="text-lg font-bold text-gray-800 mb-2">
+                            $350.00
+                        </p>
+                        <a href="#" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/300x300" alt="Product" id="watchImage5"
+                        class="w-full rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800">
+                            Garmin Forerunner 945
+                        </h3>
+                        <p class="text-sm text-gray-600 my-2">
+                            Advanced GPS multisport watch with music storage, contactless payments, training stats, and
+                            health monitoring features.
+                        </p>
+                        <p class="text-lg font-bold text-gray-800 mb-2">
+                            $600.00
+                        </p>
+                        <a href="#" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/300x300" alt="Product" id="watchImage6"
+                        class="w-full rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800">
+                            Seiko Prospex Automatic D
+                        </h3>
+                        <p class="text-sm text-gray-600 my-2">
+                            Iconic dive watch with automatic movement, stainless steel case, ceramic bezel, and
+                            Lumibrite markers.
+                        </p>
+                        <p class="text-lg font-bold text-gray-800 mb-2">
+                            $500.00
+                        </p>
+                        <a href="#" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="py-6 md:py-12 border-t-2 border-gray-400 text-center">
+            <p class="text-sm text-gray-600">
+                &copy; 2022 Goni watch Store. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Replace YOUR_ACCESS_KEY with your actual Unsplash API access key
+        const ACCESS_KEY = '09BMEmGTqQHjBl7_ow3PIkAR92p-Odj-qli59q42VLw';
+        const QUERY = 'watch';
+        const SIZE = '300x300';
+
+        // const apiUrl =
+        //     `https://api.unsplash.com/photos/random?client_id=${ACCESS_KEY}&query=${QUERY}&orientation=squarish&content_filter=high&featured=true&fit=fill&crop=entropy&auto=format&w=${SIZE}&h=${SIZE}`;
+        const apiUrl = `https://api.pexels.com/v1/search?query=${QUERY}&size=${SIZE}&per_page=7&orientation=square`;
+
+        axios.get(apiUrl)
+            .then(response => {
+                for (let index = 1; index < 7; index++) {
+                    const imageUrl = response.data.photos[index].src.medium;
+                    document.getElementById('watchImage' + index).src = imageUrl;
+                }
+                imageUrl = response.data.photos[0].src.medium;
+                document.getElementById('mainWatchImage').src = imageUrl
+            })
+
+            .catch(error => {
+                console.log(error);
+            });
+    </script>
+</body>
+
+</html>
