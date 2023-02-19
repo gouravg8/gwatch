@@ -30,14 +30,15 @@
                         Experience luxury with The Best watch - a timeless piece crafted with precision, quality
                         materials, and impeccable design.
                     </p>
-                    <a href="#" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900">
+                    <a href="#fProduct" id="scroll-link"
+                        class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900">
                         Shop Now
                     </a>
                 </div>
             </div>
         </section>
         <section class="py-12">
-            <h2 class="text-3xl font-extrabold text-gray-800 leading-tight text-center mb-12">
+            <h2 id="fProduct" class="text-3xl font-extrabold text-gray-800 leading-tight text-center mb-12">
                 Featured Products
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 container" id="container">
@@ -187,6 +188,24 @@
             .catch(error => {
                 console.log(error);
             });
+
+        // Select the link element by its ID
+        const link = document.querySelector('#scroll-link');
+
+        // Add an event listener for when the link is clicked
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Get the distance from the top of the page to the target element
+            const target = document.querySelector(link.getAttribute('href'));
+            const targetOffset = target.offsetTop;
+
+            // Animate the scroll to the target element
+            window.scrollTo({
+                top: targetOffset,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 
